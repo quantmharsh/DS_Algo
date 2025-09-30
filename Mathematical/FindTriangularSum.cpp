@@ -31,3 +31,22 @@
 
 // 1 <= nums.length <= 1000
 // 0 <= nums[i] <= 9
+
+class Solution {
+public:
+    int triangularSum(vector<int>& nums) {
+        int ans=0;
+        int n =nums.size();
+        for(int size=n-1;size>=1;size--)
+        {
+            for(int i =0;i<size;i++)
+            {         
+                   
+                    nums[i]=(nums[i]+nums[i+1])%10;
+                   
+            }
+        }
+        return nums[0];
+        
+    }
+};
