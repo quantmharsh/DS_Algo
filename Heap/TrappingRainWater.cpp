@@ -40,14 +40,14 @@ public:
         {
             for(int c:{0 , n-1})
             {
-                boundaryCells.push({heightMap[r][c], {r,c})};
+                boundaryCells.push({heightMap[r][c], {r,c}});
                 //mark at visited
                 visited[r][c]=true;
 
             }
         }
           //store all  boundary cols
-   for (int c = 0; c < n; ++c) {
+   for (int c = 0 ; c < n; c++) {
             for (int r : {0, m - 1}) { //0 : top most boundary, rows-1 bottom most boundary
                 boundaryCells.push({heightMap[r][c], {r, c}});
                 visited[r][c] = true;
@@ -75,7 +75,7 @@ public:
                 if(_i>=0 && _i<m && _j>=0 && _j<n && !visited[_i][_j] )
                 {
                     water+=max(0,height-heightMap[_i][_j]);
-                    boundaryCells.push(max({height , heightMap[_i][_j]),{_i , _j}});
+                    boundaryCells.push({max(height , heightMap[_i][_j]),{_i , _j}});
                     visited[_i][_j]=true;
                 }
             }
