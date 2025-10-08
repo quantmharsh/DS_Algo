@@ -11,6 +11,7 @@ private:
     vector<int> rank;
     
 public:
+//DSU Logic
     UnionFind(int m, int n) {
         parent.resize(m*n);
         for(int i = 0; i<m*n; i++)
