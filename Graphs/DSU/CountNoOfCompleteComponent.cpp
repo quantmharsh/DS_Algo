@@ -70,6 +70,8 @@ public:
             parent[x_parent]=y_parent;
             size[y_parent]+=size[x_parent];
         }
+        //if same value then makee
+        //any ones parent to another
         else{
              parent[y_parent]=x_parent;
             size[x_parent]+=size[y_parent];
