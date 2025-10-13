@@ -43,21 +43,26 @@
 
 // Follow-up: Can you implement both GetProduct and Add to work in O(1) time complexity instead of O(k) time complexity?
 
+
+
 //T.C : O(1) for both methods
 //S.C : O(n) for the stream
 
 class ProductOfNumbers {
 public:
+
     vector<int> products; //cumulative products 
     int n ;
     ProductOfNumbers() {
+
+
         products.clear();
         n=0;
         
     }
     
     void add(int num) {
-        //if num=0 then resret products
+        //if num=0 then reset products
         if(num==0)
         {
             products={};
