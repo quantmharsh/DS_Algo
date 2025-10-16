@@ -56,6 +56,8 @@ public:
                 currRun++;
             }
             else{
+                //assign prevrun as currrun so that we can
+                //get max subarray from both runs 
                 prevRun=currRun;
                 currRun=1;
             }
@@ -63,6 +65,8 @@ public:
             k=max(k  , min(currRun , prevRun));
         }
         return k;
+ 
+
 
     }
 };
