@@ -61,6 +61,7 @@ public:
                 prevRun=currRun;
                 currRun=1;
             }
+            //get the max k in curr as well as min of curr and prev 
             k=max(currRun/2 , k);
             k=max(k  , min(currRun , prevRun));
         }
