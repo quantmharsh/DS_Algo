@@ -52,6 +52,7 @@ class Solution {
 };
 
 //To Detect Negative Cycle
+
 for(int i=0;i<n;i++)
 {
     if(grid[i][i]<0)
