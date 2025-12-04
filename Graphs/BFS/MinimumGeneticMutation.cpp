@@ -72,7 +72,7 @@ public:
                 {
                     string temp =node;
                     temp[i]=ch;
-                    //base condition 
+                  
                 
                     //check whether exists in bankSet or not and if present then it should be not visited
                     if(bankSet.find(temp)!=bankSet.end() && find(visited.begin() , visited.end() , temp)==visited.end() )
