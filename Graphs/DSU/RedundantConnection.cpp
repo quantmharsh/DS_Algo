@@ -76,8 +76,11 @@ public:
         rank.resize( n+1 ,1);
         for(int i =1;i<=n;i++)
         {
+            //
             parent[i]=i;
         }
+
+
 
         for(auto it: edges)
         {
