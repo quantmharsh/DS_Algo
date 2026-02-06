@@ -80,4 +80,31 @@ vector<int> t;
         return t[n];
         
     }
+
+
+  //Approach3 : Constant space
+  //since we need only last 2 index value  t[i-1] ,t[i-2]
+  //store both in variable and update it
+   //Approach 2 Bottom up approach 
+
+     int rob(vector<int>& nums) {
+        int n =nums.size();
+        
+        t.resize(n+1);
+        fill(t.begin() ,t.end() , -1);
+        int prevprev=0;
+        int prev=nums[0];
+        for(int  i =2;i<=n;i++)
+          {
+            int steal =nums[i-1]+prevprev;
+            int skip= prev;
+            int temp =max(steal ,skip);
+
+            prevprev=prev;
+            prev=temp;
+
+        }
+        return prev;
+        
+    }  
 };
