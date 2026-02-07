@@ -68,4 +68,29 @@ int n ;
          memset(t , -1 , sizeof(t));
          return solve(0 , nums  , true);       
     }
+
+
+
+      //Approach 2: Bottom Up Approach
+    //When we take the index  i then we have  2 scenarios
+    //1. Array length becomes even :
+    //when it becomes even then we find max of (subtract nums[i] from last odd(take case)  ,last even(skip case))
+    //2.Array length becomes odd:
+    //when it becomes odd  then then we find max of(add nums[i] from last even , last odd (Skip case))
+    //At last return  max of t[n][0] and t[n][1];
+    long long maxAlternatingSum(vector<int>& nums) {
+       long long  n=nums.size();
+        long long t[n+1][2];
+        memset(t , 0 ,sizeof(t));
+        for(long long i =1;i<=n;i++)
+        {
+            //even case
+            t[i][0]= max(t[i-1][1]-nums[i-1] ,t[i-1][0]);
+            //odd case
+            t[i][1]=max(t[i-1][0]+nums[i-1] , t[i-1][1]);
+        }
+
+        return max(t[n][0] ,t[n][1]);
+        
+    }
 };
