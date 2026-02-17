@@ -76,4 +76,28 @@ int t[2501][2501];
 
         
     }
+
+        int lengthOfLIS(vector<int>& nums) {
+        n=nums.size();
+        vector<int>sorted;
+        for(int i =0;i<n;i++)
+        
+        {
+            //find  just greater element
+            auto it = lower_bound(sorted.begin() , sorted.end() , nums[i]);
+            //if unable to find
+            if(it==sorted.end())
+            {
+                sorted.push_back(nums[i]);
+            }
+            else{
+              *it=nums[i];
+            }
+        }
+        return sorted.size();
+
+
+
+        
+    }
 };
