@@ -44,7 +44,7 @@
 
 
 class Solution {
-public:
+public: 
 
     //Approach: Using DSU
     //TC: O(N)
