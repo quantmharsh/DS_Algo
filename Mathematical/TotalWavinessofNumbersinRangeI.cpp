@@ -70,17 +70,19 @@ public:
         for(int num =num1;num<=num2;num++)
         {
             string s=to_string(num);
+                   if(s.size()<3)
+            {
+               ans+=0;
+               continue;
+            }
             
           
             for(int i=1;i<=s.size()-2;i++ )
             {
-                  if(s.size()<3)
-            {
-               ans+=0;
-            }
+           
           
-                cout<<"ans:"<<ans<<endl;
-                cout<<"for num:"<<s<<endl;
+           //     cout<<"ans:"<<ans<<endl;
+           //     cout<<"for num:"<<s<<endl;
                 //peak
                 if(s[i]>s[i-1] && s[i]>s[i+1])
                 {
