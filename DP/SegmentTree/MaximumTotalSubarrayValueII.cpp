@@ -78,7 +78,7 @@ class SegmentTree{
         {
             segmentTree[i]=min(segmentTree[2*i+2] ,segmentTree[2*i+1]);
         }
-        else{
+        else{ 
             segmentTree[i]=max(segmentTree[2*i+2] , segmentTree[2*i+1]);
         }
     }
