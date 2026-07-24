@@ -4,10 +4,9 @@
 // A XOR triplet is defined as the XOR of three elements nums[i] XOR nums[j] XOR nums[k] where i <= j <= k.
 
 // Return the number of unique XOR triplet values from all possible triplets (i, j, k).
-
  
 
-// Example 1:
+// Example 1: 
 
 // Input: nums = [1,2]
 
