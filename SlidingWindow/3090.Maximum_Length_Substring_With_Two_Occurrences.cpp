@@ -9,7 +9,7 @@
 
 // Output: 4
 
-// Explanation:
+// Explanation:  
 
 // The following substring has a length of 4 and contains at most two occurrences of each character: "bcbbbcba".
 // Example 2:
