@@ -6,6 +6,7 @@
 // A four-person group must be assigned to four seats in the same row. The group can be seated in one of the following seat blocks:
 
 // seats 2, 3, 4, 5
+
 // seats 4, 5, 6, 7
 // seats 6, 7, 8, 9
 // A block can be used only if none of its seats are reserved. Each seat can be assigned to at most one group.
@@ -42,7 +43,7 @@
 
 class Solution {
 public:
-    //Approach: Using Bit Masking 
+    //Approach: Using Bit Masking (Bit Manipulation)
     //find the mask of each row and store it in map
     //for finding mask of each row traverse  over reservedSeats .extract row and seat number
     //then do mp[row]|=1<<seatNumber
