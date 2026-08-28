@@ -77,7 +77,7 @@ public:
             {
                 continue;
             }
-            curr.push_back(ch);
+            curr.push_back(ch); 
             count[ch-'a']--;
             //check that if after inserting ch in curr is  curr>target.
             //if ch >target[i] that means we got our greater ans. now just store characters directally in sorted oreder
