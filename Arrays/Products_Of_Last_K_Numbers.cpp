@@ -50,7 +50,14 @@
 
 class ProductOfNumbers {
 public:
-
+    //Approach: Prefix Sum Approach
+    //To solve this question in  O(1) 
+    //We need to precompute products of last k no.
+    //So whenever we are performing add operation we will  multiply it to prev prod and store
+    //in this way we can easily find last k number product  just divide product[n-1] /product[n-k-1]
+    //Edge case. If we insert  0 then reset products array because it will lead all other number product to zero and our approach will fail 
+    //if k > n then siply return 0. because there is was 0 previously which will eventually lead to 0
+    // if k==n return product[n-1]
     vector<int> products; //cumulative products 
     int n ;
     ProductOfNumbers() {
